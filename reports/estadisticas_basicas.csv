@@ -1,0 +1,6 @@
+variable,media,mediana,moda,desv_estandar,n_validos
+edad,43.36,43.0,38.0,16.06,969
+venta_total,1244.32,1229.59,220.57,739.07,1000
+n_compras,4.84,5.0,1.0,3.09,1000
+monto_compra,1223.15,1208.32,1054.31,709.36,1000
+tiempo,22.14,21.55,9.4,12.63,1000

@@ -1,4 +1,6 @@
 """
+Punto1
+
 ETL - Paso 1.d: Cargar los datos limpios a la base de datos SQL en la nube (Neon Postgres)
 
 Ejecutar (fuera de Docker, con tu entorno virtual activo):
@@ -13,21 +15,12 @@ Requiere que exista un archivo .env (ver .env.example) con DATABASE_URL apuntand
 import os
 import sys
 import pandas as pd
-from dotenv import load_dotenv
-from sqlalchemy import create_engine, text, Integer, Float, String, Date, Boolean
+from sqlalchemy import text, Integer, Float, Date, Boolean
+
+sys.path.insert(0, os.path.dirname(__file__))
+from db import get_engine
 
 TABLE_NAME = "ventas"
-
-
-def get_engine():
-    load_dotenv()
-    db_url = os.getenv("DATABASE_URL")
-    if not db_url:
-        raise RuntimeError(
-            "No se encontró DATABASE_URL. Crea un archivo .env "
-            "(copia .env.example) con tu connection string de Neon."
-        )
-    return create_engine(db_url)
 
 
 def cargar(csv_path: str, if_exists: str = "replace"):

@@ -7,6 +7,8 @@ services:
     volumes:
       - ./data:/app/data
       - ./src:/app/src
+      - ./reports:/app/reports
+
     # Por defecto no hace nada infinito; se le indica el comando al correrlo:
     #   docker compose run app python src/etl/clean_data.py data/ventas_online_2025.csv
     #   docker compose run app python src/etl/load_to_db.py data/ventas_online_2025_limpio.csv
