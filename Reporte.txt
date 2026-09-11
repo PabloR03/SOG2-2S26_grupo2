@@ -1,0 +1,30 @@
+REPORTE DE LIMPIEZA ETL
+=======================
+
+Resumen del proceso
+Filas originales: 1008
+Filas finales: 1000
+Filas eliminadas por duplicado exacto: 5
+IDs de cliente duplicados eliminados: 3
+
+Limpieza realizada
+- Montos monetarios normalizados a valores numericos.
+- Negativos corregidos en Venta_total: 63
+- Negativos corregidos en MontoCompra: 57
+- Fechas convertidas a formato YYYY-MM-DD.
+- Fechas invalidas encontradas: 0
+- Categorias normalizadas segun los catalogos validos.
+- Edades imposibles invalidadas: 23
+- Clientes menores de edad marcados como atipicos: 16
+
+Valores faltantes despues de la limpieza
+- Edad: 31
+- Genero: 75
+- MetodoPago: 98
+- Navegador: 83
+- Boletín: 73
+- Vale: 74
+
+Archivos generados
+- CSV limpio: data/ventas_online_2025_limpio.csv
+- Este reporte: Reporte.txt
