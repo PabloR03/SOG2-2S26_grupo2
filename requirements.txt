@@ -6,3 +6,5 @@ scipy
 sqlalchemy
 psycopg2-binary
 python-dotenv
+google-adk
+mcp==1.30.0
